@@ -1,0 +1,15 @@
+server:
+  port: 8771
+
+spring:
+  application:
+    name: example-springcloud-data
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipaddress}:${server.port}
+    status-page-url: http://${spring.cloud.client.ipaddress}:${server.port}/swagger-ui.html
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
