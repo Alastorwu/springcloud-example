@@ -10,8 +10,8 @@ public class TestController {
 
     @RequestMapping(value = "/test",method = RequestMethod.POST)
     public String getCity(@RequestParam("param") String param) {
-        String returnString = "data param: " + param;
+        String returnString = "data1 param: " + param;
         System.out.println(returnString);
-        return param;
+        return returnString;
     }
 }

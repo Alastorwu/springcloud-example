@@ -12,6 +12,6 @@ public class TestController {
     public String getCity(@RequestParam("param") String param) {
         String returnString = "data param: " + param;
         System.out.println(returnString);
-        return param;
+        return returnString;
     }
 }
