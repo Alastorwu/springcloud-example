@@ -16,7 +16,7 @@ public class TestController {
 
     @RequestMapping(value = "/test",method = RequestMethod.POST)
     public String getCity(@RequestBody String param) {
-        String returnString = "clint param: " + testRemote.test(param);
+        String returnString = "api param: " + testRemote.test(param);
         System.out.println(returnString);
         return returnString;
     }

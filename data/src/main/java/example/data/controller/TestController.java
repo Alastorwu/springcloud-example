@@ -10,8 +10,8 @@ public class TestController {
 
     @RequestMapping(value = "/test",method = RequestMethod.POST)
     public String getCity(@RequestParam("param") String param) {
-        String returnString = "clint param: " + param;
+        String returnString = "data param: " + param;
         System.out.println(returnString);
-        return returnString;
+        return param;
     }
 }

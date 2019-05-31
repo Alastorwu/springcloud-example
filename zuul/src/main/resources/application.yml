@@ -20,7 +20,13 @@ eureka:
 
 
 zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
   routes:
-    api:
+    data:
       path: /data/**
       serviceId: example-springcloud-data
+    api:
+      path: /api/**
+      serviceId: example-springcloud-client

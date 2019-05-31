@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class TestRemoteImpl implements TestRemote {
     @Override
     public String test(String param) {
-        System.out.println("fail param:"+param);
+        System.out.println("api fail param:"+param);
         return "fail";
     }
 }
