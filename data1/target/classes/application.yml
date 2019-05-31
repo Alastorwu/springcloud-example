@@ -1,9 +1,9 @@
 server:
-  port: 8770
+  port: 8781
 
 spring:
   application:
-    name: example-springcloud-client
+    name: example-springcloud-data
 
 eureka:
   instance:
