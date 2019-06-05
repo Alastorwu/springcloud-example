@@ -40,21 +40,21 @@ public class TestController {
         long start = System.currentTimeMillis();
 
 
-        /*for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++) {
             list.add(testRemote.test(param));
         }
-        log.info(JSON.toJSONString(list));*/
+        log.info(JSON.toJSONString(list));
 
-        List<Future<String>> futures = new ArrayList<>();
+       /* List<Future<String>> futures = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             futures.add(asyncService.asyncTest(param + i));
         }
         for (Future<String> future : futures) {
             list.add(future.get());
-        }
+        }*/
         log.info(JSON.toJSONString(list));
         long end = System.currentTimeMillis();
-        log.info("asyncTest end time elapsed:{}",(start-end));
+        log.info("asyncTest end time elapsed:{}",(end-start));
         return JSON.toJSONString(list);
 
     }
