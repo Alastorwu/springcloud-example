@@ -41,7 +41,7 @@ public class TestController {
 
 
         for (int i = 0; i < 5; i++) {
-            list.add(testRemote.test(param));
+            list.add(testRemote.test(param+i));
         }
         log.info(JSON.toJSONString(list));
 
