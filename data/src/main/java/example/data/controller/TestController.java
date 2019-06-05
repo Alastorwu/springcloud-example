@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @RequestMapping(value = "/test",method = RequestMethod.POST)
-    public String getCity(@RequestParam("param") String param) {
+    public String getCity(@RequestParam("param") String param) throws InterruptedException {
         String returnString = "data param: " + param;
+        //Thread.sleep(1000);
         System.out.println(returnString);
         return returnString;
     }
