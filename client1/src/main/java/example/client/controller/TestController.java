@@ -33,7 +33,7 @@ public class TestController {
     }
 
     @RequestMapping(value = "/asyncTest",method = RequestMethod.POST)
-    public String asyncTest(@RequestBody String param) {
+    public String asyncTest(@RequestBody String param) throws ExecutionException, InterruptedException {
         List<String> list = new ArrayList<>();
 
         log.info("asyncTest start");
